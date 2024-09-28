@@ -1,10 +1,114 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title> M DIMAS AL MUKADDAS</title>
-<BODy>
-    <h1> M DIMAS AL MUKADDAS</h1>
-    <p> 1202220373</P>
-    <P> sistem informasi </P>
-</BODy>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M DIMAS AL MUKADDAS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }   
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .instagram-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .instagram-logo {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .instagram-container p {
+            font-size: 1.5em;
+        }
+
+        .info-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        #currentTime {
+            font-size: 1.2em;
+            margin-top: 15px;
+            color: #ddd;
+        }
+    </style>
 </head>
+<body>
+
+    <img src="FOTO_DIRI.JPG" alt="Profile Picture">
+
+    <h1>M DIMAS AL MUKADDAS</h1>
+
+    <div class="instagram-container">
+        <img src="instagram.png" alt="Instagram" class="instagram-logo">
+        <p>@dimasmkdds</p>
+    </div>
+
+    <div class="info-card">
+        <p><strong>NIM:</strong> 1202220373</p>
+        <p><strong>Prodi:</strong> Sistem Informasi</p>
+    </div>
+
+    <p id="currentTime"></p>
+
+    <script>
+        function updateTime() {
+            const options = {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+            };
+            const now = new Date();
+            document.getElementById('currentTime').innerHTML = now.toLocaleDateString('id-ID', options);
+        }+
+
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
 </html>
